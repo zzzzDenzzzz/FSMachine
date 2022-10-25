@@ -6,7 +6,7 @@ namespace FSMachine
     {
         public void Performed(Document document)
         {
-            Console.WriteLine("Отправлено на утверждение");
+            Console.WriteLine($"Отправлено на утверждение : {document.GetType().Name}");
             document.State = new StatementDocumentState();
         }
 

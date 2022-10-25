@@ -6,7 +6,7 @@ namespace FSMachine
     {
         public void Performed(Document document)
         {
-            Console.WriteLine("Отправлено на хранение");
+            Console.WriteLine($"Отправлено на хранение : {document.GetType().Name}");
             document.State = new StorageDocumentState();
         }
 

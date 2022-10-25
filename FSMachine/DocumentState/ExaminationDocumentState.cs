@@ -6,7 +6,7 @@ namespace FSMachine
     {
         public void Performed(Document document)
         {
-            Console.WriteLine("Отправлено на согласование");
+            Console.WriteLine($"Отправлено на согласование : {document.GetType().Name}");
             document.State = new AgreementDocumentState();
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FSMachine.DocumentFactory;
+using System;
 
 namespace FSMachine
 {
@@ -6,7 +7,7 @@ namespace FSMachine
     {
         public void Performed(Document document)
         {
-            Console.WriteLine("Отправлено на проверку");
+            Console.WriteLine($"Отправлено на проверку : {document.GetType().Name}");
             document.State = new ExaminationDocumentState();
         }
 

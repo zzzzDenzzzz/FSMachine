@@ -1,4 +1,5 @@
-﻿using FSMachine.DocumentFactory;
+﻿using FSMachine.DocumentDecorator;
+using FSMachine.DocumentFactory;
 using System;
 
 namespace FSMachine
@@ -48,6 +49,20 @@ namespace FSMachine
             Console.WriteLine(contract.State);
             contract.Performed();
             Console.WriteLine(contract.State);
+
+            PrintLine();
+
+            var electronicContract = new ElectronicDocument(new DevelopmentDocumentState(), contract);
+            electronicContract.DocumentType();
+            Console.WriteLine(electronicContract.State);
+            electronicContract.Performed();
+            Console.WriteLine(electronicContract.State);
+            electronicContract.Performed();
+            Console.WriteLine(electronicContract.State);
+            electronicContract.Performed();
+            Console.WriteLine(electronicContract.State);
+            electronicContract.Performed();
+            Console.WriteLine(electronicContract.State);
 
             PrintLine();
 

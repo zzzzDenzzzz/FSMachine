@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DocumentDecorator\DocumentDecorator.cs" />
+    <Compile Include="DocumentDecorator\ElectronicDocument.cs" />
     <Compile Include="DocumentFactory\Contract.cs" />
     <Compile Include="DocumentFactory\ContractDocumentCreate.cs" />
     <Compile Include="DocumentFactory\IDocument.cs" />

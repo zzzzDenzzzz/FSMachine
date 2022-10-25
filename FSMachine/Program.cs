@@ -5,6 +5,8 @@ namespace FSMachine
 {
     class Program
     {
+        public static void PrintLine() => Console.WriteLine(new string('-', 35));
+
         static void Main(string[] args)
         {
             var plan = new Plan(new DevelopmentDocumentState());
@@ -19,7 +21,7 @@ namespace FSMachine
             plan.Performed();
             Console.WriteLine(plan.State);
 
-            Console.WriteLine(new string('-', 35));
+            PrintLine();
 
             var reference = new Reference(new DevelopmentDocumentState());
             reference.DocumentType();
@@ -33,7 +35,7 @@ namespace FSMachine
             reference.Performed();
             Console.WriteLine(reference.State);
 
-            Console.WriteLine(new string('-', 35));
+            PrintLine();
 
             var contract = new Contract(new DevelopmentDocumentState());
             contract.DocumentType();
@@ -47,7 +49,7 @@ namespace FSMachine
             contract.Performed();
             Console.WriteLine(contract.State);
 
-            Console.WriteLine(new string('-', 35));
+            PrintLine();
 
             Console.WriteLine();
         }
